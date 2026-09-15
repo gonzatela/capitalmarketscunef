@@ -130,25 +130,6 @@ const exploreItems = [
   "href": "entrevista-women-in-banking.html",
   "date": null
 },
-  // ── ARTÍCULOS ──
-  {
-    type: 'articulo',
-    label: 'Artículo',
-    title: 'Cómo empezar con Bloomberg Terminal',
-    desc: 'Funciones esenciales para buscar compañías, crear screeners, consultar WACC y extraer datos financieros.',
-    meta: 'Biblioteca CUNEF',
-    href: 'index.html#biblioteca',
-    date: '2026-01-10'
-  },
-  {
-    type: 'articulo',
-    label: 'Artículo',
-    title: 'Guía rápida de comparables en M&A',
-    desc: 'Qué múltiplos usar, cómo elegir peer group y cómo interpretar un football field chart.',
-    meta: 'M&A y valoración',
-    href: 'explorar.html',
-    date: '2026-02-15'
-  },
   // ── RECURSOS TÉCNICOS GRATUITOS ──
   {
     type: 'recurso',
