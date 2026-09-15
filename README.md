@@ -1,6 +1,6 @@
-# Club de Bolsa e Inversion CUNEF
+# Club Capital Markets CUNEF
 
-Web estatica del Club de Bolsa e Inversion de CUNEF.
+Web estatica del Club Capital Markets de CUNEF.
 
 ## Estructura
 
