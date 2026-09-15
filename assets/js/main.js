@@ -62,20 +62,6 @@ function updateMobileUpcomingEvents() {
 updateMobileUpcomingEvents();
 window.addEventListener('resize', updateMobileUpcomingEvents);
 
-// NEWSLETTER
-function subscribeNewsletter() {
-  const email = document.getElementById('emailInput').value;
-  const msg = document.getElementById('newsletter-msg');
-  if (!email || !email.includes('@')) {
-    msg.textContent = 'Por favor, introduce un correo válido.';
-    msg.style.color = '#c0392b';
-    return;
-  }
-  msg.textContent = '✓ ¡Gracias! Te hemos apuntado a la newsletter.';
-  msg.style.color = '#2a7a4a';
-  document.getElementById('emailInput').value = '';
-}
-
 // EXPLORAR
 const exploreItems = [
   // ── PRÓXIMOS EVENTOS ──
@@ -177,16 +163,6 @@ const exploreItems = [
     href: 'explorar.html',
     modal: 'modal6',
     date: '2024-09-20'
-  },
-  // ── NEWSLETTER ──
-  {
-    type: 'newsletter',
-    label: 'Newsletter semanal',
-    title: 'Briefing semanal de mercados',
-    desc: 'Resumen de macro, renta variable, divisas, crédito y eventos del club para estudiantes de CUNEF.',
-    meta: 'Cada semana',
-    href: 'index.html#newsletter',
-    date: '2026-05-05'
   },
   // ── ARTÍCULOS ──
   {
@@ -475,7 +451,7 @@ if (exploreSort) exploreSort.addEventListener('change', renderExplore);
 renderExplore();
 
 // Observe static cards on index.html
-document.querySelectorAll('.market-widget-card, .db-card, .recurso-card, .evento-card, .testimonial-card, .team-card, .join-panel, .newsletter-edition-card').forEach(el => {
+document.querySelectorAll('.market-widget-card, .db-card, .recurso-card, .evento-card, .testimonial-card, .team-card, .join-panel').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
