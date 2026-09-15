@@ -2871,3 +2871,6 @@ footer {
 .event-photo figcaption { margin-top: 8px; color: var(--gray-500); font-size: 12px; line-height: 1.6; }
 .event-speakers { padding-left: 1.2rem; margin: 0 0 2rem; }
 .event-speakers li { margin-bottom: .7rem; }
+
+.event-gallery-full .event-photo { margin: 0; }
+.event-gallery-full img { height: auto; }

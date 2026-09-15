@@ -105,8 +105,8 @@ const exploreItems = [
 {
   "type": "evento",
   "label": "Evento pasado",
-  "title": "Insight into Investment Banking",
-  "desc": "Sesión con profesionales de Deutsche Bank sobre valoración de compañías, procesos competitivos y el papel del asesor financiero en operaciones de M&A.",
+  "title": "Insight to Investment Banking",
+  "desc": "Sesión de M&A con Luis Armada y Carles Masias Ramírez, de Deutsche Bank, sobre transacciones corporativas, valoración y el papel del asesor financiero.",
   "meta": "10/02/2026 · Deutsche Bank · M&A",
   "href": "insight-investment-banking.html",
   "date": "2026-02-10"
