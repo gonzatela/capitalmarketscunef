@@ -90,8 +90,7 @@ const exploreItems = [
     title: 'I CUNEF Universidad Finance Superday',
     desc: 'Paneles de investment banking, asset management y alternativos con profesionales de firmas globales.',
     meta: 'Abril 2026',
-    href: 'explorar.html',
-    modal: 'modal7',
+    href: 'finance-superday.html',
     date: '2026-04-15'
   },
 {
