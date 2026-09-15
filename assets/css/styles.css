@@ -2852,3 +2852,13 @@ footer {
 .event-pending > :not(.event-pending-label) { filter: blur(8px); pointer-events: none; user-select: none; }
 .event-pending .event-pending-label { position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%); width: max-content; max-width: calc(100% - 24px); padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,.96); color: var(--blue); font-size: 13px; font-weight: 600; line-height: 1.5; text-align: center; }
 .event-pending:hover { transform: none; }
+
+/* Editorial pages for documented events and interviews. */
+.editorial-page { max-width: 1100px; margin: 0 auto; }
+.editorial-back { display: inline-block; margin-bottom: 2rem; color: var(--orange); text-decoration: none; }
+.editorial-meta { color: var(--gray-500); line-height: 1.6; margin: 1rem 0 2.5rem; }
+.editorial-body { max-width: 760px; font-size: 16px; line-height: 1.85; color: var(--gray-700); }
+.editorial-body p { margin-bottom: 1.4rem; }
+.editorial-body h2 { font-family: 'Libre Baskerville', serif; font-size: 1.25rem; line-height: 1.5; color: var(--blue); margin: 2.5rem 0 1rem; }
+.editorial-body blockquote { border-left: 3px solid var(--orange); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; }
+@media (max-width: 640px) { .eventos-recientes { display: block; grid-column: 1 / -1; } }

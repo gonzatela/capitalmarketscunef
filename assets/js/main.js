@@ -83,7 +83,7 @@ const exploreItems = [
     href: 'index.html#eventos',
     date: '2026-05-22'
   },
-  // ── EVENTOS PASADOS (más reciente primero) ──
+  // Eventos pasados e entrevistas documentados.
   {
     type: 'evento',
     label: 'Evento pasado',
@@ -94,76 +94,42 @@ const exploreItems = [
     modal: 'modal7',
     date: '2026-04-15'
   },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Wealth Management con UBS Madrid',
-    desc: 'Sesión con Pablo Carrasco y Jaime Hernández Tallada sobre gestión patrimonial y carreras en wealth management.',
-    meta: '2026 · UBS Madrid',
-    href: 'explorar.html',
-    modal: 'modal8',
-    date: '2026-02-01'
-  },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Macro global y posicionamiento de carteras',
-    desc: 'Charla sobre escenario macro para 2025 y posicionamiento en renta fija, renta variable y divisas.',
-    meta: 'Marzo 2025 · 62 asistentes',
-    href: 'explorar.html',
-    modal: 'modal1',
-    date: '2025-03-15'
-  },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Introducción a Bloomberg Terminal',
-    desc: 'Workshop práctico sobre EQS, WACC, DCF, renta fija y extracción de datos financieros históricos.',
-    meta: 'Febrero 2025',
-    href: 'explorar.html',
-    modal: 'modal2',
-    date: '2025-02-15'
-  },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Stock Pitch Competition — Edición Invierno 2025',
-    desc: 'Ocho equipos presentaron tesis de inversión ante un jurado de profesionales del sector financiero.',
-    meta: 'Enero 2025 · 8 equipos',
-    href: 'explorar.html',
-    modal: 'modal3',
-    date: '2025-01-20'
-  },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Comparables de mercado y precedent transactions',
-    desc: 'Workshop sobre trading comps, precedent transactions y construcción de tablas de comparables con Capital IQ y Bloomberg.',
-    meta: 'Noviembre 2024 · M&A',
-    href: 'explorar.html',
-    modal: 'modal4',
-    date: '2024-11-15'
-  },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Visita a la sala de mercados de BBVA',
-    desc: 'Visita a la trading room de BBVA con Q&A con profesionales de renta variable, FX y productos estructurados.',
-    meta: 'Octubre 2024 · BBVA',
-    href: 'explorar.html',
-    modal: 'modal5',
-    date: '2024-10-10'
-  },
-  {
-    type: 'evento',
-    label: 'Evento pasado',
-    title: 'Introducción al private equity',
-    desc: 'Charla sobre sourcing, due diligence, negociación, value creation y salidas profesionales en private equity.',
-    meta: 'Septiembre 2024 · Private Equity',
-    href: 'explorar.html',
-    modal: 'modal6',
-    date: '2024-09-20'
-  },
+{
+  "type": "evento",
+  "label": "Evento pasado",
+  "title": "Claves para el acceso a la Banca de Inversión",
+  "desc": "Mesa redonda sobre banca de inversión y M&A con Pablo Alonso Comba, Alejandro Ortiz Cabrero y Guillermo García Paramés. Consejos para preparar entrevistas, planificar candidaturas y valorar el encaje profesional.",
+  "meta": "29/10/2025 · CUNEF Alumni · Citi · J.P. Morgan · Jefferies",
+  "href": "claves-banca-inversion.html",
+  "date": "2025-10-29"
+},
+{
+  "type": "evento",
+  "label": "Evento pasado",
+  "title": "Insight into Investment Banking",
+  "desc": "Sesión con profesionales de Deutsche Bank sobre valoración de compañías, procesos competitivos y el papel del asesor financiero en operaciones de M&A.",
+  "meta": "10/02/2026 · Deutsche Bank · M&A",
+  "href": "insight-investment-banking.html",
+  "date": "2026-02-10"
+},
+{
+  "type": "evento",
+  "label": "Evento pasado",
+  "title": "Insight into Wealth Management",
+  "desc": "Sesión con profesionales de UBS en Madrid sobre banca privada, asesoría patrimonial, estrategias de inversión y oportunidades profesionales.",
+  "meta": "20/03/2026 · UBS · Wealth Management",
+  "href": "insight-wealth-management.html",
+  "date": "2026-03-20"
+},
+{
+  "type": "entrevista",
+  "label": "Entrevista",
+  "title": "Entrevista Women In Banking",
+  "desc": "Ana, Directora en SG CIB, y Paula Esteban conversan sobre mentoring, desarrollo profesional y su experiencia en el programa Women In Banking.",
+  "meta": "Women In Banking · Ana y Paula Esteban",
+  "href": "entrevista-women-in-banking.html",
+  "date": null
+},
   // ── ARTÍCULOS ──
   {
     type: 'articulo',
@@ -381,6 +347,7 @@ function renderExplore() {
 
   // Apply Sorting
   results.sort((a, b) => {
+    if ((sortBy === 'recent' || sortBy === 'oldest') && (!a.date || !b.date)) return Number(!a.date) - Number(!b.date);
     if (sortBy === 'recent') return new Date(b.date) - new Date(a.date);
     if (sortBy === 'oldest') return new Date(a.date) - new Date(b.date);
     if (sortBy === 'az') return a.title.localeCompare(b.title);
@@ -408,7 +375,7 @@ function renderExplore() {
     </article>`;
   }).join('');
 
-  count.textContent = `${results.length} contenidos encontrados`;
+  count.textContent = results.length === 1 ? "1 contenido encontrado" : `${results.length} contenidos encontrados`;
   empty.style.display = results.length ? 'none' : 'block';
 
   // Re-attach fade-in observer to newly rendered cards
