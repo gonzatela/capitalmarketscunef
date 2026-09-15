@@ -389,6 +389,9 @@ function renderExplore() {
   });
 
   grid.innerHTML = results.map(item => {
+    if (item.label === 'Próximo evento') {
+      return '<article class="explorar-card event-pending"><div aria-hidden="true"><div class="explorar-type">Próximo evento</div><h3 class="explorar-title">Nuevo encuentro del club</h3><p class="explorar-desc">Estamos preparando la próxima agenda de actividades y encuentros.</p></div><span class="event-pending-label">Próximamente · Por confirmar</span></article>';
+    }
     const sector = getExploreSector(item);
     const canOpenModal = item.modal && document.getElementById(item.modal);
     const action = canOpenModal
