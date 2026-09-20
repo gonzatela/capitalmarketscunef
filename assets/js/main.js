@@ -84,10 +84,19 @@ const exploreItems = [
     date: '2026-05-22'
   },
   // Eventos pasados e entrevistas documentados.
+{
+  "type": "evento",
+  "label": "Evento pasado",
+  "title": "Fondos de value investing con Magallanes",
+  "desc": "Encuentro del club dedicado a los fondos de value investing con Magallanes.",
+  "meta": "30/04/2026 · Magallanes",
+  "href": "fondos-value-investing-magallanes.html",
+  "date": "2026-04-30"
+},
   {
     type: 'evento',
     label: 'Evento pasado',
-    title: 'I CUNEF Universidad Finance Superday',
+    title: 'CUNEF Finance Superday',
     desc: 'Paneles de investment banking, asset management y alternativos con profesionales de firmas globales.',
     meta: 'Abril 2026',
     href: 'finance-superday.html',
@@ -114,8 +123,8 @@ const exploreItems = [
 {
   "type": "evento",
   "label": "Evento pasado",
-  "title": "Insight into Wealth Management",
-  "desc": "Sesión con profesionales de UBS en Madrid sobre banca privada, asesoría patrimonial, estrategias de inversión y oportunidades profesionales.",
+  "title": "Insight to Wealth Management",
+  "desc": "Sesión con Pablo Carrasco y Jaime Hernández Tellada, de UBS, sobre banca privada, gestión patrimonial y oportunidades profesionales.",
   "meta": "20/03/2026 · UBS · Wealth Management",
   "href": "insight-wealth-management.html",
   "date": "2026-03-20"
@@ -300,7 +309,7 @@ function getExploreSector(item) {
   if (title.includes('macro') || title.includes('cfa') || title.includes('ibes') || title.includes('damodaran') || title.includes('wrds') || title.includes('wharton') || meta.includes('research')) {
     return { key: 'macro-research', label: exploreSectorLabels['macro-research'] };
   }
-  if (title.includes('renta fija') || title.includes('wealth management') || title.includes('coursera') || meta.includes('asset')) {
+  if (title.includes('renta fija') || title.includes('wealth management') || title.includes('magallanes') || title.includes('coursera') || meta.includes('asset')) {
     return { key: 'asset-management', label: exploreSectorLabels['asset-management'] };
   }
   return { key: 'investment-banking', label: exploreSectorLabels['investment-banking'] };
