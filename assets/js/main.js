@@ -415,6 +415,85 @@ document.querySelectorAll('.market-widget-card, .db-card, .recurso-card, .evento
   observer.observe(el);
 });
 
+// Event photo viewer: one gallery per event page.
+const eventPhotos = Array.from(document.querySelectorAll('.event-photo img, .event-gallery img'));
+if (eventPhotos.length) {
+  const viewer = document.createElement('dialog');
+  viewer.className = 'photo-viewer';
+  viewer.setAttribute('aria-label', 'Galería de fotos del evento');
+  viewer.innerHTML = `
+    <button type="button" class="photo-viewer-close" aria-label="Cerrar visor" autofocus>×</button>
+    <button type="button" class="photo-viewer-prev" aria-label="Foto anterior">‹</button>
+    <figure><img alt=""><figcaption aria-live="polite"></figcaption></figure>
+    <button type="button" class="photo-viewer-next" aria-label="Foto siguiente">›</button>`;
+  document.body.appendChild(viewer);
+  const largePhoto = viewer.querySelector('img');
+  const caption = viewer.querySelector('figcaption');
+  let photoIndex = 0;
+  let opener;
+  let previousOverflow;
+  const showPhoto = (index) => {
+    photoIndex = (index + eventPhotos.length) % eventPhotos.length;
+    const photo = eventPhotos[photoIndex];
+    largePhoto.src = photo.currentSrc || photo.src;
+    largePhoto.alt = photo.alt;
+    const description = photo.closest('figure')?.querySelector('figcaption')?.textContent || photo.alt;
+    caption.textContent = `${photoIndex + 1} / ${eventPhotos.length} · ${description}`;
+  };
+  eventPhotos.forEach((photo, index) => {
+    let trigger = photo.closest('a');
+    if (!trigger) {
+      trigger = document.createElement('button');
+      trigger.type = 'button';
+      photo.before(trigger);
+      trigger.appendChild(photo);
+    } else {
+      trigger.removeAttribute('target');
+      trigger.setAttribute('role', 'button');
+      trigger.addEventListener('keydown', (event) => {
+        if (event.key === ' ') { event.preventDefault(); trigger.click(); }
+      });
+    }
+    trigger.classList.add('photo-viewer-trigger');
+    trigger.setAttribute('aria-haspopup', 'dialog');
+    trigger.setAttribute('aria-label', `Ampliar foto ${index + 1}: ${photo.alt}`);
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      opener = trigger;
+      showPhoto(index);
+      previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      viewer.showModal();
+    });
+  });
+  viewer.querySelector('.photo-viewer-close').addEventListener('click', () => viewer.close());
+  viewer.querySelector('.photo-viewer-prev').addEventListener('click', () => showPhoto(photoIndex - 1));
+  viewer.querySelector('.photo-viewer-next').addEventListener('click', () => showPhoto(photoIndex + 1));
+  viewer.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showPhoto(photoIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  viewer.addEventListener('click', (event) => { if (event.target === viewer) viewer.close(); });
+  viewer.addEventListener('close', () => {
+    document.body.style.overflow = previousOverflow;
+    opener?.focus();
+  });
+  let touchStart;
+  largePhoto.addEventListener('touchstart', (event) => {
+    touchStart = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+  }, { passive: true });
+  largePhoto.addEventListener('touchend', (event) => {
+    if (!touchStart) return;
+    const dx = event.changedTouches[0].clientX - touchStart.x;
+    const dy = event.changedTouches[0].clientY - touchStart.y;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) showPhoto(photoIndex + (dx < 0 ? 1 : -1));
+    touchStart = null;
+  }, { passive: true });
+  largePhoto.addEventListener('touchcancel', () => { touchStart = null; });
+}
+
 // COOKIE CONSENT
 document.addEventListener("DOMContentLoaded", () => {
   if (!localStorage.getItem('cookieChoice')) {
