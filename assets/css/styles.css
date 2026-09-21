@@ -1683,6 +1683,7 @@ section {
 
 .team-photo {
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
