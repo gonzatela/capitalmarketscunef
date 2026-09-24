@@ -84,6 +84,15 @@ const exploreItems = [
     date: '2026-05-22'
   },
   // Eventos pasados e entrevistas documentados.
+  {
+    type: 'evento',
+    label: 'Evento pasado',
+    title: 'Introducción a la Bloomberg Terminal',
+    desc: 'Primer contacto práctico con Bloomberg: creación de cuentas, análisis de mercados y visita institucional en CUNEF Universidad.',
+    meta: '23/09/2026 · CUNEF Universidad',
+    href: 'introduccion-bloomberg.html',
+    date: '2026-09-23'
+  },
 {
   "type": "evento",
   "label": "Evento pasado",
