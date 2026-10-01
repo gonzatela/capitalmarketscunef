@@ -64,6 +64,15 @@ window.addEventListener('resize', updateMobileUpcomingEvents);
 
 // EXPLORAR
 const exploreItems = [
+  {
+    type: 'newsletter',
+    label: 'Newsletter',
+    title: 'Market Brief y oportunidades · Octubre 2026',
+    desc: 'Las claves de mercado del 16 al 30 de septiembre y 28 internships en Reino Unido y Estados Unidos. Incluye agenda, tablas de oportunidades y acceso a Trackr.',
+    meta: '1 octubre 2026 · Market Brief + Oportunidades',
+    href: 'newsletter-2026-10-01.html',
+    date: '2026-10-01'
+  },
   // ── PRÓXIMOS EVENTOS ──
   {
     type: 'evento',
@@ -307,6 +316,9 @@ const exploreSectorLabels = {
 };
 
 function getExploreSector(item) {
+  if (item.type === 'newsletter') {
+    return { key: 'macro-research', label: exploreSectorLabels['macro-research'] };
+  }
   const title = item.title.toLowerCase();
   const meta = item.meta.toLowerCase();
   if (title.includes('private equity') || title.includes('pitchbook') || title.includes('lbo') || meta.includes('private equity')) {
