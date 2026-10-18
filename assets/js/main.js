@@ -67,6 +67,15 @@ const exploreItems = [
   {
     type: 'newsletter',
     label: 'Newsletter',
+    title: 'Market Brief y oportunidades UK · 18 octubre 2026',
+    desc: 'Las claves de mercado del 1 al 15 de octubre y 10 oportunidades recientes en Reino Unido: summer internships, spring weeks y off-cycle. Incluye gráficos, resultados, agenda y enlaces de candidatura.',
+    meta: '18 octubre 2026 · Market Brief + Oportunidades',
+    href: 'newsletter-2026-10-18.html',
+    date: '2026-10-18'
+  },
+  {
+    type: 'newsletter',
+    label: 'Newsletter',
     title: 'Market Brief y oportunidades · Octubre 2026',
     desc: 'Las claves de mercado del 16 al 30 de septiembre y 28 internships en Reino Unido y Estados Unidos. Incluye agenda, tablas de oportunidades y acceso a Trackr.',
     meta: '1 octubre 2026 · Market Brief + Oportunidades',
