@@ -103,6 +103,13 @@ const exploreItems = [
   },
   // Eventos pasados e entrevistas documentados.
   {
+    type: 'evento', label: 'Evento pasado',
+    title: 'Inside the Markets: de una noticia a una decisión',
+    desc: 'Alexandra Azorí (BBVA): Brexit, Telefónica, equity swaps, coberturas y decisiones bajo incertidumbre.',
+    meta: '13/10/2026 · 13:30 · Aula B1.6 · Alexandra Azorí · BBVA',
+    href: 'inside-the-markets.html', date: '2026-10-13'
+  },
+  {
     type: 'evento',
     label: 'Evento pasado',
     title: 'Introducción a la Bloomberg Terminal',
