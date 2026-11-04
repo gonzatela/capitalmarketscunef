@@ -64,6 +64,7 @@ window.addEventListener('resize', updateMobileUpcomingEvents);
 
 // EXPLORAR
 const exploreItems = [
+  {type:'newsletter',label:'Newsletter',title:'Market Brief, oportunidades UK y recursos · 4 noviembre 2026',desc:'Las claves del 16–30 de octubre: IA, bancos centrales y deuda soberana. 10 aperturas recientes en UK y recursos gratuitos para preparar tus candidaturas.',meta:'4 noviembre 2026 · Market Brief + Oportunidades + Recursos',href:'newsletter-2026-11-04.html',date:'2026-11-04'},
   {
     type: 'newsletter',
     label: 'Newsletter',
