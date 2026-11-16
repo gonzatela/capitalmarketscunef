@@ -64,6 +64,7 @@ window.addEventListener('resize', updateMobileUpcomingEvents);
 
 // EXPLORAR
 const exploreItems = [
+  {type:'newsletter',label:'Newsletter',title:'Market Brief, oportunidades UK e Inside the Markets · 16 noviembre 2026',desc:'Las claves del 1–15 de noviembre: IA, bonos y Europa. Diez oportunidades UK recientes y la crónica de Inside the Markets con Alexandra Azorí.',meta:'16 noviembre 2026 · Market Brief + Oportunidades + Vida del club',href:'newsletter-2026-11-16.html',date:'2026-11-16'},
   {type:'newsletter',label:'Newsletter',title:'Market Brief, oportunidades UK y recursos · 4 noviembre 2026',desc:'Las claves del 16–30 de octubre: IA, bancos centrales y deuda soberana. 10 aperturas recientes en UK y recursos gratuitos para preparar tus candidaturas.',meta:'4 noviembre 2026 · Market Brief + Oportunidades + Recursos',href:'newsletter-2026-11-04.html',date:'2026-11-04'},
   {
     type: 'newsletter',
