@@ -3202,3 +3202,29 @@ footer {
   .photo-viewer-next { right: calc(50% - 64px); }
   .photo-viewer figcaption { font-size: 12px; }
 }
+
+/* Official club branding: original PNG symbol and wordmark. */
+.club-brand { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.nav-logo .club-brand-symbol, .footer-logo .club-brand-symbol { width: 32px; height: auto; }
+.nav-logo .club-brand-wordmark, .footer-logo .club-brand-wordmark { width: 130px; height: auto; }
+@media (max-width: 460px) {
+  nav { padding-inline: 1rem; gap: 8px; }
+  .nav-logo { gap: 8px; }
+  .nav-logo > .brand-logo { width: 72px; height: auto; }
+  .nav-logo .club-brand { gap: 6px; }
+  .nav-logo .club-brand-symbol { width: 24px; }
+  .nav-logo .club-brand-wordmark { width: 104px; }
+}
+
+.brand-display .club-brand { display: flex; width: min(100%, 430px); gap: 20px; }
+.brand-display .club-brand-symbol { width: 76px; height: auto; flex: 0 0 auto; }
+.brand-display .club-brand-wordmark { width: calc(100% - 96px); height: auto; min-width: 0; }
+.page-brand-title { display: flex; flex-direction: column; gap: 16px; }
+.page-brand { margin-bottom: 24px; }
+.page-brand-title .club-brand, .page-brand .club-brand { max-width: 360px; }
+@media (max-width: 600px) {
+  .brand-display .club-brand { gap: 12px; max-width: 340px; }
+  .brand-display .club-brand-symbol { width: 52px; }
+  .brand-display .club-brand-wordmark { width: calc(100% - 64px); }
+  .page-brand { margin-bottom: 20px; }
+}
