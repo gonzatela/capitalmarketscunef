@@ -29,11 +29,11 @@
   <ul class="nav-links">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="#network">Network</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#biblioteca">Bases de datos</a></li>
     <li><a href="#mercado">Mercados</a></li>
     <li><a href="#noticias">Noticias</a></li>
     <li><a href="#eventos">Eventos</a></li>
-    <li><a href="#biblioteca">Bases de datos</a></li>
-    <li><a href="#recursos">Recursos</a></li>
     <li><a href="explorar.html" class="nav-page-link">Explorar</a></li>
     <li><a href="equipo.html" class="nav-page-link">Equipo</a></li>
     <li><a href="historia.html" class="nav-page-link">Historia</a></li>
@@ -118,24 +118,31 @@
   <div class="section-tag">El club</div>
   <h2 class="section-title" id="club-objective">Nuestro objetivo</h2>
   <p class="section-sub">Acercar los mercados a los alumnos mediante eventos, profesionales de la industria y contenido práctico.</p>
-  <div class="club-focus-grid">
-    <div class="club-focus-card">
-      <h3>Áreas que cubrimos</h3>
-      <ul class="club-topics" aria-label="Áreas de mercado">
-        <li>Equities</li><li>Fixed Income &amp; Credit</li><li>FX</li><li>Commodities</li><li>Rates &amp; Macro</li><li>Derivatives &amp; Quant</li><li>ETFs &amp; Funds</li>
-      </ul>
-    </div>
-    <div class="club-focus-card">
-      <h3>Perspectivas de la industria</h3>
-      <ul class="club-topics" aria-label="Perspectivas profesionales">
-        <li>Interns</li><li>Analysts</li><li>Associates</li><li>VPs</li><li>Directors</li><li>MDs</li><li>HR / Recruitment</li>
-      </ul>
+  <div class="club-overview">
+    <figure class="club-overview-photo">
+      <img src="assets/img/events/inside-the-markets/conversacion.png" alt="Alumnos conversando con Alexandra Azorí, de BBVA, en una sesión de Capital Markets" loading="lazy" width="2048" height="1536">
+      <figcaption><a href="inside-the-markets.html">Inside the Markets con Alexandra Azorí · BBVA <span aria-hidden="true">↗</span></a></figcaption>
+    </figure>
+    <div class="club-overview-content">
+      <a class="club-overview-link" href="#formacion">
+        <div><h3>Entender los mercados</h3><p>Aprende a interpretar la actualidad financiera y profundiza con guías, datos y recursos técnicos.</p></div><span class="club-overview-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="club-overview-link" href="#network">
+        <div><h3>Conocer la industria</h3><p>Conecta con profesionales y alumni, desde interns y analysts hasta associates, VPs, directors, MDs y equipos de selección.</p></div><span class="club-overview-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="club-overview-link" href="#eventos">
+        <div><h3>Ponerlo en práctica</h3><p>Participa en charlas y talleres sobre Bloomberg, valoración, análisis de empresas y decisiones de inversión.</p></div><span class="club-overview-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="club-overview-topics">
+        <h3>Áreas que cubrimos</h3>
+        <p>Equities · Fixed Income &amp; Credit · FX · Commodities · Rates &amp; Macro · Derivatives &amp; Quant · ETFs &amp; Funds</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- NETWORK -->
-<section id="network" style="padding-block: 4rem; background-color: #fff; border-bottom: 1px solid #eaeaea;">
+<section id="network" style="padding-block: 4rem; border-bottom: 1px solid #eaeaea;">
   <div class="section-tag">Network</div>
   <h2 class="section-title">Network y Alumni</h2>
   <p class="section-sub">Nuestra red de ponentes y expertos vienen de las mejores empresas.<br><span style="font-size: 0.9em; font-weight: 500; color: var(--orange); margin-top: 6px; display: inline-block;">👉 Haz clic en cualquier logo para ver sus posiciones abiertas y programas de talento.</span></p>
@@ -200,6 +207,116 @@
     <button type="button" class="network-logo-wrapper" style="background:none;border:none;cursor:pointer;padding:0;" data-company="LIFT Asset Management" data-logo="assets/img/logos/lift.png" data-careers="https://lift-am.com/en/contact/" data-scale="1" data-invert="true" data-people='[{"name":"Javier Cortés", "role":"Investment Director | Private Equity", "linkedin":"https://www.linkedin.com/in/javier-cort%C3%A9s-caia-a6bb0632/"}]' onclick="openNetworkModal(this)"><img src="assets/img/logos/lift.png" alt="LIFT Asset Management" style="filter: invert(1);" onerror="this.src='https://placehold.co/140x60/f8f9fa/333333?text=LIFT+Asset+Management'; this.style.filter='none';"></button>
   </div>
 
+</section>
+
+<!-- FORMACIÓN -->
+<section id="formacion">
+  <div class="section-tag">Formación</div>
+  <section class="fuentes-mercado" id="sigue-los-mercados" aria-labelledby="titulo-fuentes-mercado">
+    <h2 class="section-title" id="titulo-fuentes-mercado">Sigue los mercados</h2>
+    <p class="section-sub">Fuentes para seguir la actualidad, consultar datos y analizar empresas.</p>
+
+    <div class="fuentes-mercado-grid">
+      <div class="fuentes-mercado-grupo">
+        <h4>Noticias y análisis</h4>
+        <ul>
+          <li><a href="https://www.reuters.com/markets/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/reuters.svg" alt="Reuters Markets" width="144" height="60" loading="lazy" decoding="async"></a><span>Actualidad de bolsas, divisas, bonos y materias primas.</span></li>
+          <li><a href="https://www.bloomberg.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/../logos/bloomberg.svg" alt="Bloomberg" width="144" height="60" loading="lazy" decoding="async"></a><span>Noticias, datos de mercado y análisis macro.</span></li>
+          <li><a href="https://www.ft.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/financial-times.svg" alt="Financial Times" width="144" height="60" loading="lazy" decoding="async"></a><span>Economía global, mercados y banca.</span></li>
+          <li><a href="https://www.wsj.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/wall-street-journal.svg" alt="The Wall Street Journal" width="144" height="60" loading="lazy" decoding="async"></a><span>Empresas y mercados de Estados Unidos.</span></li>
+          <li><a href="https://www.economist.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/economist.svg" alt="The Economist" width="144" height="60" loading="lazy" decoding="async"></a><span>Contexto económico y político internacional.</span></li>
+        </ul>
+      </div>
+      <div class="fuentes-mercado-grupo">
+        <h4>Cotizaciones, gráficos y fondos</h4>
+        <ul>
+          <li><a href="https://finance.yahoo.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/yahoo-finance.svg" alt="Yahoo Finance" width="144" height="60" loading="lazy" decoding="async"></a><span>Cotizaciones, gráficos y precios históricos.</span></li>
+          <li><a href="https://www.tradingview.com/" target="_blank" rel="noopener" class="fuente-logo fuente-logo-tradingview"><img src="assets/img/market-sources/tradingview.svg" alt="" width="72" height="30" loading="lazy" decoding="async"><span class="fuente-nombre">TradingView</span></a><span>Gráficos interactivos para comparar activos.</span></li>
+          <li><a href="https://www.morningstar.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/morningstar.svg" alt="Morningstar" width="144" height="60" loading="lazy" decoding="async"></a><span>Fichas y análisis de fondos y ETF.</span></li>
+          <li><a href="https://www.marketwatch.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/marketwatch.png" alt="MarketWatch" width="144" height="60" loading="lazy" decoding="async"></a><span>Seguimiento de índices y noticias bursátiles.</span></li>
+          <li><a href="https://seekingalpha.com/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/seeking-alpha.png" alt="Seeking Alpha" width="144" height="60" loading="lazy" decoding="async"></a><span>Tesis de inversión y opiniones sobre cotizadas.</span></li>
+        </ul>
+      </div>
+      <div class="fuentes-mercado-grupo">
+        <h4>Datos macroeconómicos</h4>
+        <ul>
+          <li><a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener" class="fuente-logo"><img class="fuente-logo-fred" src="assets/img/market-sources/fred.png" alt="FRED" width="144" height="60" loading="lazy" decoding="async"></a><span>Series de inflación, tipos de interés y empleo.</span></li>
+          <li><a href="https://data.imf.org/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/imf.svg" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">Datos del FMI</span></a><span>Estadísticas económicas y financieras internacionales.</span></li>
+          <li><a href="https://data.worldbank.org/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/world-bank.png" alt="Datos del Banco Mundial" width="144" height="60" loading="lazy" decoding="async"></a><span>Indicadores de crecimiento y desarrollo por país.</span></li>
+          <li><a href="https://www.oecd.org/en/data.html" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/oecd.svg" alt="Datos de la OCDE" width="144" height="60" loading="lazy" decoding="async"></a><span>Indicadores comparables entre países.</span></li>
+        </ul>
+      </div>
+      <div class="fuentes-mercado-grupo">
+        <h4>Información oficial de cotizadas</h4>
+        <ul>
+          <li><a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener" class="fuente-logo"><img src="assets/img/market-sources/sec.svg" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">SEC EDGAR</span></a><span>Informes anuales, trimestrales y otros documentos presentados ante la SEC.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="formacion-tecnica" aria-labelledby="titulo-recursos-tecnicos">
+  <h3 class="section-title" id="titulo-recursos-tecnicos">Recursos técnicos gratuitos</h3>
+  <p class="section-sub">Webs seleccionadas para aprender financial modeling, valuation y los procesos del sector financiero.</p>
+
+    <div class="fuentes-mercado-grid">
+    <div class="fuentes-mercado-grupo">
+      <h4>Modelización y valoración</h4>
+      <ul>
+        <li><a class="fuente-logo" href="https://www.wallstreetprep.com/free-resources/" target="_blank" rel="noopener"><img src="assets/img/resource-sources/wall-street-prep.svg" alt="Wall Street Prep" width="144" height="60" loading="lazy" decoding="async"></a><span>Tutoriales gratuitos sobre financial modeling, valuation y Excel usados en banca de inversión.</span></li>
+        <li><a class="fuente-logo" href="https://corporatefinanceinstitute.com/resources/" target="_blank" rel="noopener"><img src="assets/img/resource-sources/cfi.svg" alt="CFI — Free Guides" width="144" height="60" loading="lazy" decoding="async"></a><span>Guías prácticas y plantillas sobre contabilidad, finanzas corporativas y análisis financiero.</span></li>
+        <li><a class="fuente-logo" href="https://breakingintowallstreet.com/resources/" target="_blank" rel="noopener"><img class="fuente-logo-biws" src="assets/img/resource-sources/biws.png" alt="Breaking Into Wall Street" width="144" height="60" loading="lazy" decoding="async"></a><span>Recursos gratuitos de modeling, LBO y análisis. Casos prácticos y plantillas de Excel.</span></li>
+        <li><a class="fuente-enlace" href="https://aswathdamodaran.blogspot.com/" target="_blank" rel="noopener">Damodaran Online</a><span>Damodaran comparte datasets, plantillas y materiales de valoración de Stern NYU. Referencia académica.</span></li>
+      </ul>
+    </div>
+    <div class="fuentes-mercado-grupo">
+      <h4>Carreras y entrevistas</h4>
+      <ul>
+        <li><a class="fuente-logo" href="https://mergersandinquisitions.com/articles/" target="_blank" rel="noopener"><img src="assets/img/resource-sources/mi.png" alt="Mergers &amp; Inquisitions" width="144" height="60" loading="lazy" decoding="async"></a><span>Guías detalladas sobre procesos de selección en banca de inversión, private equity y hedge funds.</span></li>
+        <li><a class="fuente-enlace" href="https://www.streetofwalls.com/finance-training-courses/" target="_blank" rel="noopener">Street of Walls</a><span>Cursos gratuitos de finance training: entrevistas de investment banking, valuation, modeling, private equity, hedge funds, quant y consulting.</span></li>
+      </ul>
+    </div>
+    <div class="fuentes-mercado-grupo">
+      <h4>Formación y research</h4>
+      <ul>
+        <li><a class="fuente-logo" href="https://www.investopedia.com/financial-term-dictionary-4769738" target="_blank" rel="noopener"><img src="assets/img/resource-sources/investopedia.png" alt="Investopedia" width="144" height="60" loading="lazy" decoding="async"></a><span>Diccionario financiero y guías sobre instrumentos, estrategias y conceptos del mercado.</span></li>
+        <li><a class="fuente-logo" href="https://pitchbook.com/news/articles" target="_blank" rel="noopener"><img src="assets/img/resource-sources/pitchbook.png" alt="PitchBook News" width="144" height="60" loading="lazy" decoding="async"></a><span>Tendencias en private equity, venture capital y M&A con datos y análisis del sector.</span></li>
+        <li><a class="fuente-logo" href="https://www.coursera.org/courses?query=financial%20modeling" target="_blank" rel="noopener"><img src="assets/img/resource-sources/coursera.svg" alt="Coursera — Finance" width="144" height="60" loading="lazy" decoding="async"></a><span>Cursos gratuitos de universidades como Wharton, Columbia e IESE sobre finanzas y mercados.</span></li>
+        <li><a class="fuente-logo" href="https://www.cfainstitute.org/en/research" target="_blank" rel="noopener"><img src="assets/img/resource-sources/cfa.svg" alt="CFA Institute Research" width="144" height="60" loading="lazy" decoding="async"></a><span>Papers, informes y materiales de estudio del CFA Institute. Referencia para el sector.</span></li>
+      </ul>
+    </div>
+  </div>
+  </section>
+</section>
+
+<!-- BIBLIOTECA -->
+<section id="biblioteca">
+  <div class="section-tag">Acceso exclusivo CUNEF</div>
+  <h2 class="section-title">Bases de datos profesionales</h2>
+  <p class="section-sub">Como estudiante de CUNEF tienes acceso gratuito a las herramientas que usan los profesionales en banca de inversión y research.</p>
+
+    <div class="fuentes-mercado-grid">
+    <div class="fuentes-mercado-grupo">
+      <h4>Datos de mercados</h4>
+      <ul>
+        <li><a class="fuente-logo" href="https://encuentra.cunef.edu/discovery/fulldisplay?context=L&vid=34CUNEF_INST:VU1&search_scope=MyInstitution&tab=LibraryCatalog&docid=alma991000191979708131" target="_blank" rel="noopener"><img src="assets/img/logos/bloomberg.svg" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">Bloomberg Terminal</span></a><span>La plataforma de referencia global en datos financieros, análisis de mercados, fixed income, renta variable, derivados y economía macro. Imprescindible en cualquier carrera financiera.</span></li>
+        <li><a class="fuente-logo" href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000542709608131" target="_blank" rel="noopener"><img src="assets/img/resource-sources/lseg.svg" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">LSEG (Refinitiv)</span></a><span>London Stock Exchange Group ofrece datos de mercados globales, análisis de derivados y herramientas de trading profesional.</span></li>
+      </ul>
+    </div>
+    <div class="fuentes-mercado-grupo">
+      <h4>Empresas y operaciones</h4>
+      <ul>
+        <li><a class="fuente-logo" href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000208929708131" target="_blank" rel="noopener"><img src="assets/img/resource-sources/capital-iq.png" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">Capital IQ</span></a><span>Plataforma de S&P Global con datos de empresas, transacciones de M&A, financiación y análisis de crédito. Muy usada en private equity y banca de inversión.</span></li>
+        <li><a class="fuente-logo" href="https://login.cunef.idm.oclc.org/login?url=https://sabi.informa.es/ip" target="_blank" rel="noopener"><img src="assets/img/resource-sources/sabi.png" alt="SABI" width="144" height="60" loading="lazy" decoding="async"></a><span>Base de datos de información financiera de empresas españolas y portuguesas. Cuentas anuales, balances y datos sectoriales de más de 2,5 millones de compañías.</span></li>
+      </ul>
+    </div>
+    <div class="fuentes-mercado-grupo">
+      <h4>Research y estimaciones</h4>
+      <ul>
+        <li><a class="fuente-logo" href="https://encuentra.cunef.edu/discovery/fulldisplay?context=L&vid=34CUNEF_INST:VU1&search_scope=MyInstitution&tab=LibraryCatalog&docid=alma991000544209308131" target="_blank" rel="noopener"><img src="assets/img/resource-sources/wrds.svg" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">WRDS</span></a><span>Plataforma de investigación financiera de Wharton con acceso a datasets profesionales para análisis empírico, mercados, compañías y research académico.</span></li>
+        <li><a class="fuente-logo" href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000558773908131" target="_blank" rel="noopener"><img src="assets/img/resource-sources/lseg.svg" alt="" width="144" height="60" loading="lazy" decoding="async"><span class="fuente-nombre">LSEG IBES Guidance</span></a><span>Base de datos de estimaciones de analistas y guidance de empresas. Fundamental para análisis de renta variable y modelos de valoración.</span></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- MERCADO -->
@@ -286,11 +403,11 @@
             {
               "title": "Futuros",
               "symbols": [
-                { "s": "BMFBOVESPA:ISP1!", "d": "S&P 500" },
-                { "s": "BMFBOVESPA:EUR1!", "d": "Euro" },
-                { "s": "CMCMARKETS:GOLD", "d": "Oro" },
-                { "s": "PYTH:WTI3!", "d": "WTI Crude Oil" },
-                { "s": "BMFBOVESPA:CCM1!", "d": "Corn" }
+                { "s": "EUREX:FDAX1!", "d": "DAX" },
+                { "s": "EUREX:FESX1!", "d": "Euro Stoxx 50" },
+                { "s": "EUREX:FGBL1!", "d": "Euro Bund" },
+                { "s": "EUREX:FGBS1!", "d": "Euro Schatz" },
+                { "s": "EUREX:FGBM1!", "d": "Euro BOBL" }
               ],
               "originalTitle": "Futures"
             },
@@ -338,149 +455,10 @@
   <p class="section-sub">Titulares y movimientos relevantes para seguir el pulso del mercado antes de clase, eventos o sesiones del club.</p>
 
   <div class="news-widget-wrap">
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container news-widget">
-      <div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-      {
-        "displayMode": "regular",
-        "feedMode": "all_symbols",
-        "colorTheme": "light",
-        "isTransparent": true,
-        "locale": "es",
-        "width": "100%",
-        "height": "100%"
-      }
-      </script>
-    </div>
-    <!-- TradingView Widget END -->
+    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-news-feed.js"></script>
+    <tv-news-feed class="news-widget"></tv-news-feed>
   </div>
 </section>
-<!-- EVENTOS -->
-<section id="eventos">
-  <div class="section-tag">Agenda</div>
-  <h2 class="section-title">Próximos eventos</h2>
-  <p class="section-sub">Estamos preparando la próxima agenda. Las fechas y los detalles de los eventos están por confirmar.</p>
-
-  <div class="eventos-layout">
-    <div class="eventos-list">
-
-      <div class="evento-card event-pending" data-upcoming-event>
-        <span class="event-pending-label">Próximamente · Por confirmar</span>
-        <div class="evento-date" aria-hidden="true">
-          <div class="evento-day">15</div>
-          <div class="evento-month">May</div>
-        </div>
-        <div class="evento-info" aria-hidden="true">
-          <span class="evento-tag">Charla</span>
-          <div class="evento-title">Renta fija en el nuevo ciclo de tipos: estrategias y oportunidades</div>
-          <div class="evento-desc">Un gestor de renta fija de una firma de asset management explicará cómo posicionar una cartera de bonos en el actual entorno macroeconómico.</div>
-          <div class="evento-meta">
-            <span>📍 Aula Magna, CUNEF</span>
-            <span>🕖 18:30</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="evento-card event-pending" data-upcoming-event>
-        <span class="event-pending-label">Próximamente · Por confirmar</span>
-        <div class="evento-date" aria-hidden="true">
-          <div class="evento-day">22</div>
-          <div class="evento-month">May</div>
-        </div>
-        <div class="evento-info" aria-hidden="true">
-          <span class="evento-tag">Workshop</span>
-          <div class="evento-title">Construcción de un LBO model en Excel desde cero</div>
-          <div class="evento-desc">Workshop práctico donde aprenderemos a construir un modelo de LBO completo usando datos reales extraídos de Capital IQ.</div>
-          <div class="evento-meta">
-            <span>📍 Sala 2.01, CUNEF</span>
-            <span>🕕 17:00</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="evento-card event-pending" data-upcoming-event>
-        <span class="event-pending-label">Próximamente · Por confirmar</span>
-        <div class="evento-date" aria-hidden="true">
-          <div class="evento-day">05</div>
-          <div class="evento-month">Jun</div>
-        </div>
-        <div class="evento-info" aria-hidden="true">
-          <span class="evento-tag">Competición</span>
-          <div class="evento-title">Stock Pitch Competition — Edición Primavera 2025</div>
-          <div class="evento-desc">Presenta tu idea de inversión ante un jurado de profesionales. Equipos de 2-3 personas. Inscripción abierta hasta el 30 de mayo.</div>
-          <div class="evento-meta">
-            <span>📍 Aula Magna, CUNEF</span>
-            <span>🕔 16:00</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="evento-card event-pending" data-upcoming-event>
-        <span class="event-pending-label">Próximamente · Por confirmar</span>
-        <div class="evento-date" aria-hidden="true">
-          <div class="evento-day">18</div>
-          <div class="evento-month">Jun</div>
-        </div>
-        <div class="evento-info" aria-hidden="true">
-          <span class="evento-tag">Visita</span>
-          <div class="evento-title">Visita a la sala de mercados de Santander Corporate &amp; Investment Banking</div>
-          <div class="evento-desc">Visita guiada a la sala de mercados de Santander CIB en Madrid. Aforo limitado — plazas por orden de inscripción.</div>
-          <div class="evento-meta">
-            <span>📍 Santander CIB, Madrid</span>
-            <span>🕙 10:00</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="eventos-recientes">
-        <h3 class="eventos-section-title">Eventos recientes</h3>
-        <a class="evento-card" href="inside-the-markets.html"><div class="evento-date"><div class="evento-day">13</div><div class="evento-month">Oct 2026</div></div><div class="evento-info"><span class="evento-tag">Evento pasado</span><div class="evento-title">Inside the Markets: de una noticia a una decisión</div><div class="evento-desc">Alexandra Azorí, de BBVA, sobre Brexit, Telefónica y decisiones bajo incertidumbre. Lee la crónica y descubre las claves del encuentro.</div><div class="evento-meta"><span>13/10/2026 · Alexandra Azorí · BBVA</span></div></div></a>
-        <a class="evento-card" href="introduccion-bloomberg.html">
-          <div class="evento-date"><div class="evento-day">23</div><div class="evento-month">Sep 2026</div></div>
-          <div class="evento-info">
-            <span class="evento-tag">Evento pasado</span>
-            <div class="evento-title">Introducción a la Bloomberg Terminal</div>
-            <div class="evento-desc">Primer contacto práctico con Bloomberg: creación de cuentas, análisis de mercados y visita institucional en CUNEF Universidad.</div>
-            <div class="evento-meta"><span>23/09/2026 · CUNEF Universidad</span></div>
-          </div>
-        </a>
-<a class="evento-card" href="fondos-value-investing-magallanes.html"><div class="evento-date"><div class="evento-day">30</div><div class="evento-month">Abr 2026</div></div><div class="evento-info"><span class="evento-tag">Evento pasado</span><div class="evento-title">Fondos de value investing con Magallanes</div><div class="evento-desc">Encuentro del club dedicado a los fondos de value investing con Magallanes.</div><div class="evento-meta"><span>30/04/2026 · Magallanes</span></div></div></a>
-        <a class="evento-card" href="finance-superday.html">
-          <div class="evento-date">
-            <div class="evento-day">15</div>
-            <div class="evento-month">Abr</div>
-          </div>
-          <div class="evento-info">
-            <span class="evento-tag">Evento</span>
-            <div class="evento-title">CUNEF Finance Superday</div>
-            <div class="evento-desc">Paneles de investment banking, asset management y alternativos con firmas globales, más networking con profesionales.</div>
-            <div class="evento-meta">
-              <span>Aula Magna, CUNEF</span>
-              <span>Abril 2026</span>
-            </div>
-          </div>
-        </a>
-        <a class="evento-card" href="insight-wealth-management.html"><div class="evento-date"><div class="evento-day">20</div><div class="evento-month">03/2026</div></div><div class="evento-info"><span class="evento-tag">Evento pasado</span><div class="evento-title">Insight to Wealth Management</div><div class="evento-desc">Sesión con Pablo Carrasco y Jaime Hernández Tellada, de UBS, sobre banca privada, gestión patrimonial y oportunidades profesionales.</div><div class="evento-meta"><span>UBS · Wealth Management</span></div></div></a>
-        <a class="evento-card" href="insight-investment-banking.html"><div class="evento-date"><div class="evento-day">10</div><div class="evento-month">02/2026</div></div><div class="evento-info"><span class="evento-tag">Evento pasado</span><div class="evento-title">Insight to Investment Banking</div><div class="evento-desc">Sesión de M&amp;A con Luis Armada y Carles Masias Ramírez, de Deutsche Bank, sobre transacciones corporativas, valoración y el papel del asesor financiero.</div><div class="evento-meta"><span>Deutsche Bank · M&amp;A</span></div></div></a>
-        <a class="evento-card" href="claves-banca-inversion.html"><div class="evento-date"><div class="evento-day">29</div><div class="evento-month">10/2025</div></div><div class="evento-info"><span class="evento-tag">Evento pasado</span><div class="evento-title">Claves para el acceso a la Banca de Inversión</div><div class="evento-desc">Mesa redonda sobre banca de inversión y M&amp;A con Pablo Alonso Comba, Alejandro Ortiz Cabrero y Guillermo García Paramés. Consejos para preparar entrevistas, planificar candidaturas y valorar el encaje profesional.</div><div class="evento-meta"><span>CUNEF Alumni · Citi · J.P. Morgan · Jefferies</span></div></div></a>
-      </div>
-
-    </div>
-
-    <!-- CALENDAR SIDEBAR -->
-    <div class="calendar-sidebar">
-      <div class="calendar-title">No te pierdas ningún evento</div>
-      <div class="calendar-desc">Añade el calendario del club a Google Calendar y recibe recordatorios de todos los eventos con antelación.</div>
-      <a href="https://calendar.google.com/calendar/u/0?cid=MTFmMDY5YjA2OGY3MjJmMTMxN2ZkZDFhMzZmNzI1MTlhZDZhMjYxM2Y4YWZhMTdlNzA2YTdhMGFmMjFlNDE3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" class="calendar-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
-        Añadir a Google Calendar
-      </a>
-      <div class="calendar-note">Compatible con iCal, Outlook y otros calendarios</div>
-    </div>
-  </div>
-</section>
-
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
   <img src="assets/img/image-01-e87cb72ed2.png" alt="Finance Superday — Networking Rothschild & Co">
@@ -490,166 +468,74 @@
   </div>
 </div>
 
-<!-- BIBLIOTECA -->
-<section id="biblioteca">
-  <div class="section-tag">Acceso exclusivo CUNEF</div>
-  <h2 class="section-title">Bases de datos profesionales</h2>
-  <p class="section-sub">Como estudiante de CUNEF tienes acceso gratuito a las herramientas que usan los profesionales en banca de inversión y research.</p>
+<!-- EVENTOS -->
+<section id="eventos">
+  <div class="section-tag">Agenda</div>
+  <h2 class="section-title">Próximos eventos</h2>
+  <p class="section-sub">Estamos preparando la próxima agenda. Las fechas y los detalles de los eventos están por confirmar.</p>
 
-  <div class="db-grid">
-    <a href="https://encuentra.cunef.edu/discovery/fulldisplay?context=L&vid=34CUNEF_INST:VU1&search_scope=MyInstitution&tab=LibraryCatalog&docid=alma991000191979708131" target="_blank" class="db-card featured">
-      <div class="db-badge">⭐ Principal</div>
-      <div class="db-card-name">Bloomberg Terminal</div>
-      <div class="db-card-desc">La plataforma de referencia global en datos financieros, análisis de mercados, fixed income, renta variable, derivados y economía macro. Imprescindible en cualquier carrera financiera.</div>
-      <div class="db-card-tags">
-        <span class="db-tag">Renta variable</span>
-        <span class="db-tag">Fixed income</span>
-        <span class="db-tag">Macro</span>
-        <span class="db-tag">M&A</span>
-      </div>
-      <div class="db-card-footer">
-        <span class="db-access">Acceder vía Biblioteca CUNEF →</span>
-        <span class="db-arrow">↗</span>
-      </div>
-    </a>
+  <div class="eventos-layout">
+    <div class="eventos-list">
+      <article class="explorar-card event-pending" data-type="evento" data-upcoming-event>
+        <div aria-hidden="true">
+          <div class="explorar-type">Próximo evento</div>
+          <h3 class="explorar-title">Nuevo encuentro del club</h3>
+          <p class="explorar-desc">Estamos preparando la próxima agenda de actividades y encuentros.</p>
+        </div>
+        <span class="event-pending-label">Próximamente · Por confirmar</span>
+      </article>
 
-    <a href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000208929708131" target="_blank" class="db-card featured">
-      <div class="db-badge">⭐ Principal</div>
-      <div class="db-card-name">Capital IQ</div>
-      <div class="db-card-desc">Plataforma de S&P Global con datos de empresas, transacciones de M&A, financiación y análisis de crédito. Muy usada en private equity y banca de inversión.</div>
-      <div class="db-card-tags">
-        <span class="db-tag">Private Equity</span>
-        <span class="db-tag">M&A</span>
-        <span class="db-tag">Crédito</span>
-        <span class="db-tag">Comps</span>
+      <div class="eventos-recientes">
+        <h3 class="eventos-section-title">Eventos recientes</h3>
+        <article class="explorar-card" data-type="evento">
+          <div class="explorar-type">Evento pasado</div>
+          <h3 class="explorar-title">Inside the Markets: de una noticia a una decisión</h3>
+          <p class="explorar-desc">Alexandra Azorí, de BBVA, sobre Brexit, Telefónica y decisiones bajo incertidumbre. Lee la crónica y descubre las claves del encuentro.</p>
+          <div class="explorar-meta">
+            <span>13/10/2026 · Alexandra Azorí · BBVA</span>
+            <a class="explorar-link" href="inside-the-markets.html">Abrir →</a>
+          </div>
+        </article>
+        <article class="explorar-card" data-type="evento">
+          <div class="explorar-type">Evento pasado</div>
+          <h3 class="explorar-title">Introducción a la Bloomberg Terminal</h3>
+          <p class="explorar-desc">Primer contacto práctico con Bloomberg: creación de cuentas, análisis de mercados y visita institucional en CUNEF Universidad.</p>
+          <div class="explorar-meta">
+            <span>23/09/2026 · CUNEF Universidad</span>
+            <a class="explorar-link" href="introduccion-bloomberg.html">Abrir →</a>
+          </div>
+        </article>
+        <article class="explorar-card" data-type="evento">
+          <div class="explorar-type">Evento pasado</div>
+          <h3 class="explorar-title">Fondos de value investing con Magallanes</h3>
+          <p class="explorar-desc">Encuentro del club dedicado a los fondos de value investing con Magallanes.</p>
+          <div class="explorar-meta">
+            <span>30/04/2026 · Magallanes</span>
+            <a class="explorar-link" href="fondos-value-investing-magallanes.html">Abrir →</a>
+          </div>
+        </article>
+        <article class="explorar-card" data-type="evento">
+          <div class="explorar-type">Evento pasado</div>
+          <h3 class="explorar-title">CUNEF Finance Superday</h3>
+          <p class="explorar-desc">Paneles de investment banking, asset management y alternativos con firmas globales, más networking con profesionales.</p>
+          <div class="explorar-meta">
+            <span>15/04/2026 · Aula Magna, CUNEF</span>
+            <a class="explorar-link" href="finance-superday.html">Abrir →</a>
+          </div>
+        </article>
       </div>
-      <div class="db-card-footer">
-        <span class="db-access">Acceder vía Biblioteca CUNEF →</span>
-        <span class="db-arrow">↗</span>
-      </div>
-    </a>
+    </div>
 
-    <a href="https://encuentra.cunef.edu/discovery/fulldisplay?context=L&vid=34CUNEF_INST:VU1&search_scope=MyInstitution&tab=LibraryCatalog&docid=alma991000544209308131" target="_blank" class="db-card featured">
-      <div class="db-badge">⭐ Principal</div>
-      <div class="db-card-name">Wharton Research Data Services (WRDS)</div>
-      <div class="db-card-desc">Plataforma de investigación financiera de Wharton con acceso a datasets profesionales para análisis empírico, mercados, compañías y research académico.</div>
-      <div class="db-card-tags">
-        <span class="db-tag">Research</span>
-        <span class="db-tag">Datasets</span>
-        <span class="db-tag">Mercados</span>
-        <span class="db-tag">Wharton</span>
-      </div>
-      <div class="db-card-footer">
-        <span class="db-access">Acceder vía Biblioteca CUNEF →</span>
-        <span class="db-arrow">↗</span>
-      </div>
-    </a>
-
-    <a href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000542709608131" target="_blank" class="db-card">
-      <div class="db-badge secondary">Disponible</div>
-      <div class="db-card-name">LSEG (Refinitiv)</div>
-      <div class="db-card-desc">London Stock Exchange Group ofrece datos de mercados globales, análisis de derivados y herramientas de trading profesional.</div>
-      <div class="db-card-tags">
-        <span class="db-tag">Derivados</span>
-        <span class="db-tag">Trading</span>
-        <span class="db-tag">Data</span>
-      </div>
-      <div class="db-card-footer">
-        <span class="db-access">Acceder vía Biblioteca CUNEF →</span>
-        <span class="db-arrow">↗</span>
-      </div>
-    </a>
-
-    <a href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000558773908131" target="_blank" class="db-card">
-      <div class="db-badge secondary">Disponible</div>
-      <div class="db-card-name">LSEG IBES Guidance</div>
-      <div class="db-card-desc">Base de datos de estimaciones de analistas y guidance de empresas. Fundamental para análisis de renta variable y modelos de valoración.</div>
-      <div class="db-card-tags">
-        <span class="db-tag">Estimaciones</span>
-        <span class="db-tag">Equity Research</span>
-        <span class="db-tag">Guidance</span>
-      </div>
-      <div class="db-card-footer">
-        <span class="db-access">Acceder vía Biblioteca CUNEF →</span>
-        <span class="db-arrow">↗</span>
-      </div>
-    </a>
-
-    <a href="https://login.cunef.idm.oclc.org/login?url=https://sabi.informa.es/ip" target="_blank" class="db-card">
-      <div class="db-badge secondary">Disponible</div>
-      <div class="db-card-name">SABI</div>
-      <div class="db-card-desc">Base de datos de información financiera de empresas españolas y portuguesas. Cuentas anuales, balances y datos sectoriales de más de 2,5 millones de compañías.</div>
-      <div class="db-card-tags">
-        <span class="db-tag">España</span>
-        <span class="db-tag">Portugal</span>
-        <span class="db-tag">PYMES</span>
-        <span class="db-tag">Sectoriales</span>
-      </div>
-      <div class="db-card-footer">
-        <span class="db-access">Acceder vía CUNEF SSO →</span>
-        <span class="db-arrow">↗</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- RECURSOS -->
-<section id="recursos">
-  <div class="section-tag">Formación</div>
-  <h2 class="section-title">Recursos técnicos gratuitos</h2>
-  <p class="section-sub">Webs seleccionadas para aprender financial modeling, valuation y los procesos del sector financiero.</p>
-
-  <div class="recursos-grid">
-    <a href="https://www.wallstreetprep.com/free-resources/" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Modeling &amp; Valuation</div>
-      <div class="recurso-name">Wall Street Prep</div>
-      <div class="recurso-desc">Tutoriales gratuitos sobre financial modeling, valuation y Excel usados en banca de inversión.</div>
-    </a>
-    <a href="https://corporatefinanceinstitute.com/resources/" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Finanzas Corporativas</div>
-      <div class="recurso-name">CFI — Free Guides</div>
-      <div class="recurso-desc">Guías prácticas y plantillas sobre contabilidad, finanzas corporativas y análisis financiero.</div>
-    </a>
-    <a href="https://mergersandinquisitions.com/articles/" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Carreras &amp; Procesos</div>
-      <div class="recurso-name">Mergers & Inquisitions</div>
-      <div class="recurso-desc">Guías detalladas sobre procesos de selección en banca de inversión, private equity y hedge funds.</div>
-    </a>
-    <a href="https://breakingintowallstreet.com/resources/" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Banca de Inversión</div>
-      <div class="recurso-name">Breaking Into Wall Street</div>
-      <div class="recurso-desc">Recursos gratuitos de modeling, LBO y análisis. Casos prácticos y plantillas de Excel.</div>
-    </a>
-    <a href="https://www.streetofwalls.com/finance-training-courses/" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Finance Training</div>
-      <div class="recurso-name">Street of Walls</div>
-      <div class="recurso-desc">Cursos gratuitos de finance training: entrevistas de investment banking, valuation, modeling, private equity, hedge funds, quant y consulting.</div>
-    </a>
-    <a href="https://aswathdamodaran.blogspot.com/" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Valoración Académica</div>
-      <div class="recurso-name">Damodaran Online</div>
-      <div class="recurso-desc">Damodaran comparte datasets, plantillas y materiales de valoración de Stern NYU. Referencia académica.</div>
-    </a>
-    <a href="https://www.investopedia.com/financial-term-dictionary-4769738" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Referencia</div>
-      <div class="recurso-name">Investopedia</div>
-      <div class="recurso-desc">Diccionario financiero y guías sobre instrumentos, estrategias y conceptos del mercado.</div>
-    </a>
-    <a href="https://pitchbook.com/news/articles" target="_blank" class="recurso-card">
-      <div class="recurso-cat">VC &amp; Private Equity</div>
-      <div class="recurso-name">PitchBook News</div>
-      <div class="recurso-desc">Tendencias en private equity, venture capital y M&A con datos y análisis del sector.</div>
-    </a>
-    <a href="https://www.coursera.org/courses?query=financial%20modeling" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Online Learning</div>
-      <div class="recurso-name">Coursera — Finance</div>
-      <div class="recurso-desc">Cursos gratuitos de universidades como Wharton, Columbia e IESE sobre finanzas y mercados.</div>
-    </a>
-    <a href="https://www.cfainstitute.org/en/research" target="_blank" class="recurso-card">
-      <div class="recurso-cat">Research &amp; CFA</div>
-      <div class="recurso-name">CFA Institute Research</div>
-      <div class="recurso-desc">Papers, informes y materiales de estudio del CFA Institute. Referencia para el sector.</div>
-    </a>
+<!-- CALENDAR SIDEBAR -->
+    <div class="calendar-sidebar">
+      <div class="calendar-title">No te pierdas ningún evento</div>
+      <div class="calendar-desc">Añade el calendario del club a Google Calendar y recibe recordatorios de todos los eventos con antelación.</div>
+      <a href="https://calendar.google.com/calendar/u/0?cid=MTFmMDY5YjA2OGY3MjJmMTMxN2ZkZDFhMzZmNzI1MTlhZDZhMjYxM2Y4YWZhMTdlNzA2YTdhMGFmMjFlNDE3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" class="calendar-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+        Añadir a Google Calendar
+      </a>
+      <div class="calendar-note">Compatible con iCal, Outlook y otros calendarios</div>
+    </div>
   </div>
 </section>
 
@@ -690,18 +576,7 @@
         </a>
       </div>
     </div>
-    <div>
-      <div class="footer-col-title">Bases de datos</div>
-      <ul class="footer-links">
-        <li><a href="https://encuentra.cunef.edu/discovery/fulldisplay?context=L&vid=34CUNEF_INST:VU1&search_scope=MyInstitution&tab=LibraryCatalog&docid=alma991000191979708131" target="_blank">Bloomberg Terminal</a></li>
-        <li><a href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000208929708131" target="_blank">Capital IQ</a></li>
-        <li><a href="https://encuentra.cunef.edu/discovery/fulldisplay?context=L&vid=34CUNEF_INST:VU1&search_scope=MyInstitution&tab=LibraryCatalog&docid=alma991000544209308131" target="_blank">WRDS</a></li>
-        <li><a href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000542709608131" target="_blank">LSEG (Refinitiv)</a></li>
-        <li><a href="https://encuentra.cunef.edu/permalink/34CUNEF_INST/tmg4lg/alma991000558773908131" target="_blank">LSEG IBES</a></li>
-        <li><a href="https://login.cunef.idm.oclc.org/login?url=https://sabi.informa.es/ip" target="_blank">SABI</a></li>
-      </ul>
-    </div>
-    <div>
+    <div class="footer-club">
       <div class="footer-col-title">Club</div>
       <ul class="footer-links">
         <li><a href="index.html">Inicio</a></li>
@@ -710,7 +585,7 @@
         <li><a href="#eventos">Eventos</a></li>
         <li><a href="equipo.html">Equipo</a></li>
     <li><a href="historia.html">Historia</a></li>
-        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#formacion">Formación</a></li>
         <li><a href="explorar.html">Explorar</a></li>
         <li><a href="#unete">Únete al club</a></li>
       </ul>

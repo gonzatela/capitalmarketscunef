@@ -385,14 +385,14 @@ function renderExplore() {
 
   grid.innerHTML = results.map(item => {
     if (item.label === 'Próximo evento') {
-      return '<article class="explorar-card event-pending"><div aria-hidden="true"><div class="explorar-type">Próximo evento</div><h3 class="explorar-title">Nuevo encuentro del club</h3><p class="explorar-desc">Estamos preparando la próxima agenda de actividades y encuentros.</p></div><span class="event-pending-label">Próximamente · Por confirmar</span></article>';
+      return '<article class="explorar-card event-pending" data-type="evento"><div aria-hidden="true"><div class="explorar-type">Próximo evento</div><h3 class="explorar-title">Nuevo encuentro del club</h3><p class="explorar-desc">Estamos preparando la próxima agenda de actividades y encuentros.</p></div><span class="event-pending-label">Próximamente · Por confirmar</span></article>';
     }
     const sector = getExploreSector(item);
     const canOpenModal = item.modal && document.getElementById(item.modal);
     const action = canOpenModal
       ? `<button class="explorar-link" type="button" onclick="openModal('${item.modal}')" style="border:0;background:transparent;padding:0;cursor:pointer;font-family:'Inter',sans-serif;">Ver detalle</button>`
       : `<a class="explorar-link" href="${item.href}" ${item.href.startsWith('http') ? 'target="_blank"' : ''}>Abrir →</a>`;
-    return `<article class="explorar-card">
+    return `<article class="explorar-card" data-type="${item.type}">
       <div class="explorar-type">${item.label}</div>
       <h3 class="explorar-title">${item.title}</h3>
       <p class="explorar-desc">${item.desc}</p>
