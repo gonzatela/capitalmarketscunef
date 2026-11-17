@@ -787,7 +787,7 @@ section {
 
 /* ── BIBLIOTECA ── */
 #biblioteca {
-  background: var(--beige-light);
+  background: var(--white);
   border-bottom: 1px solid var(--border);
 }
 
@@ -923,7 +923,7 @@ section {
 
 /* ── FORMACIÓN ── */
 #formacion {
-  background: var(--white);
+  background: var(--beige-light);
   border-bottom: 1px solid var(--border);
 }
 
@@ -978,6 +978,10 @@ section {
 }
 
 .formacion-tecnica {
+  padding: 0;
+}
+
+.market-live {
   margin-top: 2.5rem;
   padding: 2rem 0 0;
   border-top: 1px solid var(--border);
