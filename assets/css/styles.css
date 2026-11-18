@@ -1695,6 +1695,9 @@ section {
 .explorar-card[data-type="entrevista"] .explorar-title { color: #8639b5; }
 .explorar-card[data-type="recurso"] .explorar-title { color: #087548; }
 .explorar-card[data-type="base-datos"] .explorar-title { color: #00758b; }
+.explorar-card[data-type="career-path"] .explorar-title { color: var(--blue); }
+.career-explore-intro { margin: 16px 0; padding: 16px; border: 1px solid var(--border); border-radius: 8px; color: var(--gray-700); font-size: 14px; }
+.career-explore-intro a { color: var(--blue); text-underline-offset: 3px; }
 
 .explorar-desc {
   font-size: 13px;

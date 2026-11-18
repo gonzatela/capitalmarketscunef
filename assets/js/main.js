@@ -32,6 +32,23 @@ if (nav && navToggle) {
   });
 }
 
+// Open a linked resource group when navigating to its fragment.
+function revealCareerAnchor() {
+  if (!document.querySelector('.career-page') || !window.location.hash) return;
+  let id;
+  try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+  const target = document.getElementById(id);
+  if (!target) return;
+  if (target.matches('details')) target.open = true;
+  let parent = target.parentElement;
+  while (parent) {
+    if (parent.matches('details')) parent.open = true;
+    parent = parent.parentElement;
+  }
+}
+window.addEventListener('hashchange', revealCareerAnchor);
+revealCareerAnchor();
+
 // MOBILE UPCOMING EVENTS
 function updateMobileUpcomingEvents() {
   const cards = Array.from(document.querySelectorAll('[data-upcoming-event][data-event-date]'));
@@ -64,6 +81,11 @@ window.addEventListener('resize', updateMobileUpcomingEvents);
 
 // EXPLORAR
 const exploreItems = [
+  {"type":"career-path","label":"Career Path · Módulo 01","title":"01 Encuentra prácticas y empleo","desc":"Fichas sectoriales de CUNEF en PDF y canales de reclutamiento por categoría: encuentra oportunidades, verifica requisitos y organiza tus candidaturas.","meta":"Capital Markets Career Path · Empieza aquí","href":"career-path-01-empleo.html","date":"2026-11-18","module":1,"keywords":"fichas sectores banca inversión servicios financieros consultoría auditoría inmobiliario seguros prácticas internacionales EURES Eurodesk EuroBrussels OCDE BCE Banco Mundial AIESEC IAESTE Eurodyssey Recruiting Erasmus GoinGlobal Business France English Jobs Foro de Empleo CUNEF InfoJobs Trabajando Talentoteca StudentJob iAgora Primer Empleo Tecnoempleo Wellfound ErasmusIntern GoAbroad InternshipFinder Iberprax Trackr Forged Finance LinkedIn Indeed Glassdoor Welcome to the Jungle CareerBuilder Bright Network TARGETjobs Gradcracker JobTeaser Handshake Prosple GradConnection SEEK JobsDB JobStreet American Economic Association AEA JOE Econ Job Market 12twenty Symplicity SEO London Social Mobility Foundation Out for Undergrad Out4Undergrad O4U ALPFA Forté Forte National Black MBA Association NBMBAA Proud Employers "},
+  {"type":"career-path","label":"Career Path · Módulo 02","title":"02 Prepara tu candidatura","desc":"CV en español e inglés, plantillas editables, logros, carta de motivación, recomendación y LinkedIn actualizado.","meta":"Capital Markets Career Path","href":"career-path-02-candidatura.html","date":"2026-11-18","module":2},
+  {"type":"career-path","label":"Career Path · Módulo 03","title":"03 Practica para entrevistas técnicas","desc":"Proceso de preparación y guías para banca de inversión, private equity y mercados. The Red Book: muestra oficial y acceso al editor.","meta":"Capital Markets Career Path","href":"career-path-03-entrevistas.html","date":"2026-11-18","module":3},
+  {"type":"career-path","label":"Career Path · Módulo 04","title":"04 Prepara tu incorporación","desc":"Tras recibir una oferta, revisa condiciones y formaliza tus prácticas con CUNEF.","meta":"Capital Markets Career Path · Tras recibir una oferta","href":"career-path-04-incorporacion.html","date":"2026-11-18","module":4,"keywords":"oferta aceptación convenio anexo formalización prácticas incorporación CUNEF matrícula calendario seguros"},
+
   {type:'newsletter',label:'Newsletter',title:'Market Brief, oportunidades UK e Inside the Markets · 16 noviembre 2026',desc:'Las claves del 1–15 de noviembre: IA, bonos y Europa. Diez oportunidades UK recientes y la crónica de Inside the Markets con Alexandra Azorí.',meta:'16 noviembre 2026 · Market Brief + Oportunidades + Vida del club',href:'newsletter-2026-11-16.html',date:'2026-11-16'},
   {type:'newsletter',label:'Newsletter',title:'Market Brief, oportunidades UK y recursos · 4 noviembre 2026',desc:'Las claves del 16–30 de octubre: IA, bancos centrales y deuda soberana. 10 aperturas recientes en UK y recursos gratuitos para preparar tus candidaturas.',meta:'4 noviembre 2026 · Market Brief + Oportunidades + Recursos',href:'newsletter-2026-11-04.html',date:'2026-11-04'},
   {
@@ -321,7 +343,8 @@ const exploreItems = [
     date: '2023-01-06'
   },
 ];
-let activeExploreFilter = 'todos';
+const requestedExploreType = new URLSearchParams(window.location.search).get('tipo');
+let activeExploreFilter = document.querySelector(`.filter-chip[data-filter="${CSS.escape(requestedExploreType || 'todos')}"]`) ? (requestedExploreType || 'todos') : 'todos';
 let activeExploreSector = 'todos';
 
 const exploreSectorLabels = {
@@ -334,6 +357,7 @@ const exploreSectorLabels = {
 };
 
 function getExploreSector(item) {
+  if (item.type === 'career-path') return { key: 'transversal', label: 'Preparación profesional · Varios sectores' };
   if (item.type === 'newsletter') {
     return { key: 'macro-research', label: exploreSectorLabels['macro-research'] };
   }
@@ -367,14 +391,15 @@ function renderExplore() {
 
   let results = exploreItems.filter(item => {
     const sector = getExploreSector(item);
-    const matchesFilter = activeExploreFilter === 'todos' || item.type === activeExploreFilter;
-    const matchesSector = activeExploreSector === 'todos' || sector.key === activeExploreSector;
-    const text = `${item.label} ${item.title} ${item.desc} ${item.meta} ${sector.label}`.toLowerCase();
+    const matchesFilter = activeExploreFilter === 'todos' || item.type === activeExploreFilter || (activeExploreFilter === 'recurso' && item.type === 'career-path');
+    const matchesSector = activeExploreSector === 'todos' || sector.key === activeExploreSector || item.type === 'career-path';
+    const text = `${item.label} ${item.title} ${item.desc} ${item.meta} ${sector.label} ${item.keywords || ''}`.toLowerCase();
     return matchesFilter && matchesSector && (!query || text.includes(query));
   });
 
   // Apply Sorting
   results.sort((a, b) => {
+    if (a.type === 'career-path' && b.type === 'career-path') return a.module - b.module;
     if ((sortBy === 'recent' || sortBy === 'oldest') && (!a.date || !b.date)) return Number(!a.date) - Number(!b.date);
     if (sortBy === 'recent') return new Date(b.date) - new Date(a.date);
     if (sortBy === 'oldest') return new Date(a.date) - new Date(b.date);
@@ -382,6 +407,9 @@ function renderExplore() {
     if (sortBy === 'za') return b.title.localeCompare(a.title);
     return 0;
   });
+
+  const careerIntro = document.getElementById('careerExploreIntro');
+  if (careerIntro) careerIntro.hidden = activeExploreFilter !== 'career-path';
 
   grid.innerHTML = results.map(item => {
     if (item.label === 'Próximo evento') {
@@ -429,19 +457,27 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.filter-chip[data-filter]').forEach(chip => {
   chip.addEventListener('click', () => {
     activeExploreFilter = chip.dataset.filter;
-    document.querySelectorAll('.filter-chip[data-filter]').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.filter-chip[data-filter]').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
     chip.classList.add('active');
+    chip.setAttribute('aria-pressed', 'true');
     renderExplore();
   });
 });
 document.querySelectorAll('.filter-chip[data-sector]').forEach(chip => {
   chip.addEventListener('click', () => {
     activeExploreSector = chip.dataset.sector;
-    document.querySelectorAll('.filter-chip[data-sector]').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.filter-chip[data-sector]').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
     chip.classList.add('active');
+    chip.setAttribute('aria-pressed', 'true');
     renderExplore();
   });
 });
+document.querySelectorAll('.filter-chip[data-filter]').forEach(chip => {
+  const active = chip.dataset.filter === activeExploreFilter;
+  chip.classList.toggle('active', active);
+  chip.setAttribute('aria-pressed', String(active));
+});
+document.querySelectorAll('.filter-chip[data-sector]').forEach(chip => chip.setAttribute('aria-pressed', String(chip.classList.contains('active'))));
 const exploreSearch = document.getElementById('explorarSearch');
 if (exploreSearch) exploreSearch.addEventListener('input', renderExplore);
 const exploreSort = document.getElementById('explorarSort');

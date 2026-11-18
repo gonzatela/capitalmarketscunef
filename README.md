@@ -24,6 +24,10 @@ Despues abre:
 http://127.0.0.1:8765/
 ```
 
+## Career Path
+
+`career-path.html` presenta el itinerario profesional de cuatro módulos. Se accede desde Formación y desde la categoría Career Path en Explorar; sus módulos también aparecen bajo Recursos. Las decisiones sobre materiales, fuentes, descargas y verificación están en [CAREER_PATH.md](CAREER_PATH.md).
+
 ## Historia
 
 - `historia.html`: archivo por cursos académicos (septiembre–agosto), del más reciente al más antiguo. El curso 2026/27 es el actual; 2025/26, el anterior.
